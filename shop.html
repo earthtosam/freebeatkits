@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="./img/logo_icon.png " type="image/x-icon">
-    <title>FreeBeatKits | Blog</title>
+    <title>FreeBeatKits | Collection</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 
 <body>
@@ -86,7 +87,8 @@
                                         </table>
                                     </div>
                                     <div class="select-button">
-                                        <a href="#" class="primary-btn checkout-btn">DOWNLOAD</a>
+                                        <a href="./audio/808vol.1.zip" class="primary-btn checkout-btn"
+                                            download>DOWNLOAD</a>
                                     </div>
                                 </div>
                             </li>
@@ -102,14 +104,11 @@
                         <i class="ti-menu"></i>
                         <span>Categories</span>
                         <ul class="depart-hover">
-                            <li class="active"><a href="#">Drum Kits</a></li>
-                            <li><a href="#">Loop Kits</a></li>
-                            <li><a href="#">Flute Kits</a></li>
-                            <li><a href="#">Bass Kits</a></li>
-                            <li><a href="#">Bell Kits</a></li>
-                            <li><a href="#">Brass Kits</a></li>
-                            <li><a href="#">Guitar Kits</a></li>
-                            <li><a href="#">Xylophone Kits</a></li>
+                            <li class="active"><a href="./shop.html">All Categories</a></li>
+                            <li><a href="./shop.html">Drum Kits</a></li>
+                            <li><a href="./shop.html">Instrument Kits</a></li>
+                            <li><a href="./shop.html">Loop Kits</a></li>
+                            <li><a href="./shop.html">Bass Kits</a></li>
                         </ul>
                     </div>
                 </div>
@@ -150,15 +149,22 @@
                 <div class="col-lg-3 col-md-6 col-sm-8 order-2 order-lg-1 produts-sidebar-filter">
                     <div class="filter-widget">
                         <h4 class="fw-title">Categories</h4>
-                        <ul class="filter-catagories">
-                            <li><a href="#">Drum Kits</a></li>
-                            <li><a href="#">Loop Kits</a></li>
-                            <li><a href="#">Flute Kits</a></li>
-                            <li><a href="#">Bass Kits</a></li>
-                            <li><a href="#">Bell Kits</a></li>
-                            <li><a href="#">Brass Kits</a></li>
-                            <li><a href="#">Guitar Kits</a></li>
-                            <li><a href="#">Xylophone Kits</a></li>
+                        <ul id="menuBtnContainer" class="filter-catagories">
+                            <button class="btn active" onclick="filterSelection('all')">
+                                <li>All Categories</li>
+                            </button>
+                            <button class="btn" onclick="filterSelection('01')">
+                                <li>Drum Kits</li>
+                            </button>
+                            <button class="btn" onclick="filterSelection('02')">
+                                <li>Instrument Kits</li>
+                            </button>
+                            <button class="btn" onclick="filterSelection('03')">
+                                <li>Loop Kits</li>
+                            </button>
+                            <button class="btn" onclick="filterSelection('04')">
+                                <li>Bass Kits</li>
+                            </button>
                         </ul>
                     </div>
                 </div>
@@ -166,20 +172,30 @@
                     <div class="product-show-option">
                         <div class="row">
                             <div class="col-lg-12 col-md-12 text-right">
-                                <p>Showing 1- 11 of 11 Kits</p>
+                                <p>11 Sound Kits</p>
                             </div>
                         </div>
                     </div>
                     <div class="product-list">
                         <div class="row">
                             <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
+                                <div class="product-item filterDiv 01 animated fadeIn delay-0.3s">
                                     <div class="pi-pic">
                                         <img src="img/products/product-1.jpg" alt="">
                                         <ul>
-                                            <li class="w-icon active"><a href="#"><i class="icon_mail"></i></a></li>
-                                            <li class="quick-view"><a href="#">+ Download</a></li>
-                                            <li class="w-icon"><a href="#"><i class="fa fa-play"></i></a></li>
+                                            <li class="w-icon active"><a
+                                                    href="mailto:?subject=Listen to this Freebeatkits Sound Pack!&amp;body=Check it out at: http://www.freebeatkits.com"><i
+                                                        class="icon_mail"></i></a>
+                                            </li>
+                                            <li class="quick-view"><a href="./audio/808vol.1.zip" download>+
+                                                    Download</a></li>
+                                            <li class="w-icon">
+                                                <audio id="player" src="./audio/808_03_ds.WAV"></audio>
+                                                <div>
+                                                    <a onclick="document.getElementById('player').play()"><i
+                                                            class='fa fa-play'></i></a>
+                                                </div>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="pi-text">
@@ -191,13 +207,23 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
+                                <div class="product-item filterDiv 01 animated fadeIn delay-0.3s">
                                     <div class="pi-pic">
                                         <img src="img/products/product-2.jpg" alt="">
                                         <ul>
-                                            <li class="w-icon active"><a href="#"><i class="icon_mail"></i></a></li>
-                                            <li class="quick-view"><a href="#">+ Download</a></li>
-                                            <li class="w-icon"><a href="#"><i class="fa fa-play"></i></a></li>
+                                            <li class="w-icon active"><a
+                                                    href="mailto:?subject=Listen to this Freebeatkits Sound Pack!&amp;body=Check it out at: http://www.freebeatkits.com"><i
+                                                        class="icon_mail"></i></a>
+                                            </li>
+                                            <li class="quick-view"><a href="./audio/808vol.1.zip" download>+
+                                                    Download</a></li>
+                                            <li class="w-icon">
+                                                <audio id="player" src="./audio/808_03_ds.WAV"></audio>
+                                                <div>
+                                                    <a onclick="document.getElementById('player').play()"><i
+                                                            class='fa fa-play'></i></a>
+                                                </div>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="pi-text">
@@ -209,13 +235,23 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
+                                <div class="product-item filterDiv 01 animated fadeIn delay-0.3s">
                                     <div class="pi-pic">
                                         <img src="img/products/product-3.jpg" alt="">
                                         <ul>
-                                            <li class="w-icon active"><a href="#"><i class="icon_mail"></i></a></li>
-                                            <li class="quick-view"><a href="#">+ Download</a></li>
-                                            <li class="w-icon"><a href="#"><i class="fa fa-play"></i></a></li>
+                                            <li class="w-icon active"><a
+                                                    href="mailto:?subject=Listen to this Freebeatkits Sound Pack!&amp;body=Check it out at: http://www.freebeatkits.com"><i
+                                                        class="icon_mail"></i></a>
+                                            </li>
+                                            <li class="quick-view"><a href="./audio/808vol.1.zip" download>+
+                                                    Download</a></li>
+                                            <li class="w-icon">
+                                                <audio id="player" src="./audio/808_03_ds.WAV"></audio>
+                                                <div>
+                                                    <a onclick="document.getElementById('player').play()"><i
+                                                            class='fa fa-play'></i></a>
+                                                </div>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="pi-text">
@@ -227,13 +263,23 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
+                                <div class="product-item filterDiv 02 animated fadeIn delay-0.3s">
                                     <div class="pi-pic">
                                         <img src="img/products/product-4.jpg" alt="">
                                         <ul>
-                                            <li class="w-icon active"><a href="#"><i class="icon_mail"></i></a></li>
-                                            <li class="quick-view"><a href="#">+ Download</a></li>
-                                            <li class="w-icon"><a href="#"><i class="fa fa-play"></i></a></li>
+                                            <li class="w-icon active"><a
+                                                    href="mailto:?subject=Listen to this Freebeatkits Sound Pack!&amp;body=Check it out at: http://www.freebeatkits.com"><i
+                                                        class="icon_mail"></i></a>
+                                            </li>
+                                            <li class="quick-view"><a href="./audio/808vol.1.zip" download>+
+                                                    Download</a></li>
+                                            <li class="w-icon">
+                                                <audio id="player" src="./audio/808_03_ds.WAV"></audio>
+                                                <div>
+                                                    <a onclick="document.getElementById('player').play()"><i
+                                                            class='fa fa-play'></i></a>
+                                                </div>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="pi-text">
@@ -245,13 +291,23 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
+                                <div class="product-item filterDiv 02 animated fadeIn delay-0.3s">
                                     <div class="pi-pic">
                                         <img src="img/products/product-5.jpg" alt="">
                                         <ul>
-                                            <li class="w-icon active"><a href="#"><i class="icon_mail"></i></a></li>
-                                            <li class="quick-view"><a href="#">+ Download</a></li>
-                                            <li class="w-icon"><a href="#"><i class="fa fa-play"></i></a></li>
+                                            <li class="w-icon active"><a
+                                                    href="mailto:?subject=Listen to this Freebeatkits Sound Pack!&amp;body=Check it out at: http://www.freebeatkits.com"><i
+                                                        class="icon_mail"></i></a>
+                                            </li>
+                                            <li class="quick-view"><a href="./audio/808vol.1.zip" download>+
+                                                    Download</a></li>
+                                            <li class="w-icon">
+                                                <audio id="player" src="./audio/808_03_ds.WAV"></audio>
+                                                <div>
+                                                    <a onclick="document.getElementById('player').play()"><i
+                                                            class='fa fa-play'></i></a>
+                                                </div>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="pi-text">
@@ -263,13 +319,23 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
+                                <div class="product-item filterDiv 02 animated fadeIn delay-0.3s">
                                     <div class="pi-pic">
                                         <img src="img/products/product-6.jpg" alt="">
                                         <ul>
-                                            <li class="w-icon active"><a href="#"><i class="icon_mail"></i></a></li>
-                                            <li class="quick-view"><a href="#">+ Download</a></li>
-                                            <li class="w-icon"><a href="#"><i class="fa fa-play"></i></a></li>
+                                            <li class="w-icon active"><a
+                                                    href="mailto:?subject=Listen to this Freebeatkits Sound Pack!&amp;body=Check it out at: http://www.freebeatkits.com"><i
+                                                        class="icon_mail"></i></a>
+                                            </li>
+                                            <li class="quick-view"><a href="./audio/808vol.1.zip" download>+
+                                                    Download</a></li>
+                                            <li class="w-icon">
+                                                <audio id="player" src="./audio/808_03_ds.WAV"></audio>
+                                                <div>
+                                                    <a onclick="document.getElementById('player').play()"><i
+                                                            class='fa fa-play'></i></a>
+                                                </div>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="pi-text">
@@ -281,13 +347,23 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
+                                <div class="product-item filterDiv 03 animated fadeIn delay-0.3s">
                                     <div class="pi-pic">
                                         <img src="img/products/product-7.jpg" alt="">
                                         <ul>
-                                            <li class="w-icon active"><a href="#"><i class="icon_mail"></i></a></li>
-                                            <li class="quick-view"><a href="#">+ Download</a></li>
-                                            <li class="w-icon"><a href="#"><i class="fa fa-play"></i></a></li>
+                                            <li class="w-icon active"><a
+                                                    href="mailto:?subject=Listen to this Freebeatkits Sound Pack!&amp;body=Check it out at: http://www.freebeatkits.com"><i
+                                                        class="icon_mail"></i></a>
+                                            </li>
+                                            <li class="quick-view"><a href="./audio/808vol.1.zip" download>+
+                                                    Download</a></li>
+                                            <li class="w-icon">
+                                                <audio id="player" src="./audio/808_03_ds.WAV"></audio>
+                                                <div>
+                                                    <a onclick="document.getElementById('player').play()"><i
+                                                            class='fa fa-play'></i></a>
+                                                </div>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="pi-text">
@@ -299,13 +375,23 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
+                                <div class="product-item filterDiv 03 animated fadeIn delay-0.3s">
                                     <div class="pi-pic">
                                         <img src="img/products/product-8.jpg" alt="">
                                         <ul>
-                                            <li class="w-icon active"><a href="#"><i class="icon_mail"></i></a></li>
-                                            <li class="quick-view"><a href="#">+ Download</a></li>
-                                            <li class="w-icon"><a href="#"><i class="fa fa-play"></i></a></li>
+                                            <li class="w-icon active"><a
+                                                    href="mailto:?subject=Listen to this Freebeatkits Sound Pack!&amp;body=Check it out at: http://www.freebeatkits.com"><i
+                                                        class="icon_mail"></i></a>
+                                            </li>
+                                            <li class="quick-view"><a href="./audio/808vol.1.zip" download>+
+                                                    Download</a></li>
+                                            <li class="w-icon">
+                                                <audio id="player" src="./audio/808_03_ds.WAV"></audio>
+                                                <div>
+                                                    <a onclick="document.getElementById('player').play()"><i
+                                                            class='fa fa-play'></i></a>
+                                                </div>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="pi-text">
@@ -317,13 +403,23 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
+                                <div class="product-item filterDiv 03 animated fadeIn delay-0.3s">
                                     <div class="pi-pic">
                                         <img src="img/products/product-9.jpg" alt="">
                                         <ul>
-                                            <li class="w-icon active"><a href="#"><i class="icon_mail"></i></a></li>
-                                            <li class="quick-view"><a href="#">+ Download</a></li>
-                                            <li class="w-icon"><a href="#"><i class="fa fa-play"></i></a></li>
+                                            <li class="w-icon active"><a
+                                                    href="mailto:?subject=Listen to this Freebeatkits Sound Pack!&amp;body=Check it out at: http://www.freebeatkits.com"><i
+                                                        class="icon_mail"></i></a>
+                                            </li>
+                                            <li class="quick-view"><a href="./audio/808vol.1.zip" download>+
+                                                    Download</a></li>
+                                            <li class="w-icon">
+                                                <audio id="player" src="./audio/808_03_ds.WAV"></audio>
+                                                <div>
+                                                    <a onclick="document.getElementById('player').play()"><i
+                                                            class='fa fa-play'></i></a>
+                                                </div>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="pi-text">
@@ -335,14 +431,24 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
+                                <div class="product-item filterDiv 04 animated fadeIn delay-0.3s">
                                     <div class="pi-pic">
                                         <div class="sale pp-sale">Featured</div>
                                         <img src="img/products/product-10.jpg" alt="">
                                         <ul>
-                                            <li class="w-icon active"><a href="#"><i class="icon_mail"></i></a></li>
-                                            <li class="quick-view"><a href="#">+ Download</a></li>
-                                            <li class="w-icon"><a href="#"><i class="fa fa-play"></i></a></li>
+                                            <li class="w-icon active"><a
+                                                    href="mailto:?subject=Listen to this Freebeatkits Sound Pack!&amp;body=Check it out at: http://www.freebeatkits.com"><i
+                                                        class="icon_mail"></i></a>
+                                            </li>
+                                            <li class="quick-view"><a href="./audio/808vol.1.zip" download>+
+                                                    Download</a></li>
+                                            <li class="w-icon">
+                                                <audio id="player" src="./audio/808_03_ds.WAV"></audio>
+                                                <div>
+                                                    <a onclick="document.getElementById('player').play()"><i
+                                                            class='fa fa-play'></i></a>
+                                                </div>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="pi-text">
@@ -354,14 +460,24 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
+                                <div class="product-item filterDiv 04 animated fadeIn delay-0.3s">
                                     <div class="pi-pic">
                                         <div class="sale pp-sale">Featured</div>
                                         <img src="img/products/product-11.jpg" alt="">
                                         <ul>
-                                            <li class="w-icon active"><a href="#"><i class="icon_mail"></i></a></li>
-                                            <li class="quick-view"><a href="#">+ Download</a></li>
-                                            <li class="w-icon"><a href="#"><i class="fa fa-play"></i></a></li>
+                                            <li class="w-icon active"><a
+                                                    href="mailto:?subject=Listen to this Freebeatkits Sound Pack!&amp;body=Check it out at: http://www.freebeatkits.com"><i
+                                                        class="icon_mail"></i></a>
+                                            </li>
+                                            <li class="quick-view"><a href="./audio/808vol.1.zip" download>+
+                                                    Download</a></li>
+                                            <li class="w-icon">
+                                                <audio id="player" src="./audio/808_03_ds.WAV"></audio>
+                                                <div>
+                                                    <a onclick="document.getElementById('player').play()"><i
+                                                            class='fa fa-play'></i></a>
+                                                </div>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="pi-text">
@@ -450,6 +566,7 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/product_filter.js"></script>
 </body>
 
 </html>
